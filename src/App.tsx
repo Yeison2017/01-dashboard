@@ -1,12 +1,16 @@
 import { BrowserRouter } from "react-router-dom";
+import Providers from "./Providers";
+import Topbar from "./scenes/global/Topbar";
 
 const App = () => {
   return (
-    <BrowserRouter>
+    <Providers>
       <div className="app">
-        <h1>App</h1>
+        <main className="content">
+          <Topbar />
+        </main>
       </div>
-    </BrowserRouter>
+    </Providers>
   );
 };
 
