@@ -1,5 +1,6 @@
 import { createContext, useState, useMemo, Context } from "react";
 import { createTheme, Palette, Theme } from "@mui/material/styles";
+import { PaletteMode } from "@mui/material";
 
 export const tokens = (mode: string) => ({
   ...(mode === "dark"
@@ -128,12 +129,12 @@ export const tokens = (mode: string) => ({
 });
 
 // mui theme settings
-export const themeSettings = (mode: string) => {
+export const themeSettings = (mode: PaletteMode) => {
   const colors = tokens(mode);
 
   return createTheme({
     palette: {
-      // mode: mode,
+      mode: mode,
       ...(mode === "dark"
         ? {
             primary: {
@@ -169,30 +170,30 @@ export const themeSettings = (mode: string) => {
           }),
     },
     typography: {
-      fontFamily: ["Source Sans Pro", "sans-serif"].join(" "),
+      fontFamily: ["Source Sans Pro", "sans-serif"].join(","),
       fontSize: 12,
       h1: {
-        fontFamily: ["Source Sans Pro", "sans-serif"].join(" "),
+        fontFamily: ["Source Sans Pro", "sans-serif"].join(","),
         fontSize: 40,
       },
       h2: {
-        fontFamily: ["Source Sans Pro", "sans-serif"].join(" "),
+        fontFamily: ["Source Sans Pro", "sans-serif"].join(","),
         fontSize: 32,
       },
       h3: {
-        fontFamily: ["Source Sans Pro", "sans-serif"].join(" "),
+        fontFamily: ["Source Sans Pro", "sans-serif"].join(","),
         fontSize: 24,
       },
       h4: {
-        fontFamily: ["Source Sans Pro", "sans-serif"].join(" "),
+        fontFamily: ["Source Sans Pro", "sans-serif"].join(","),
         fontSize: 20,
       },
       h5: {
-        fontFamily: ["Source Sans Pro", "sans-serif"].join(" "),
+        fontFamily: ["Source Sans Pro", "sans-serif"].join(","),
         fontSize: 16,
       },
       h6: {
-        fontFamily: ["Source Sans Pro", "sans-serif"].join(" "),
+        fontFamily: ["Source Sans Pro", "sans-serif"].join(","),
         fontSize: 14,
       },
     },
@@ -209,7 +210,7 @@ export const ColorModeContext: Context<IColorModeContext> = createContext({
 });
 
 export const useMode = () => {
-  const [mode, setMode] = useState("dark");
+  const [mode, setMode] = useState<PaletteMode>("dark");
 
   const colorMode = useMemo(
     () => ({

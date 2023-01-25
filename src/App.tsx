@@ -1,5 +1,6 @@
-import { BrowserRouter } from "react-router-dom";
+import { BrowserRouter, Route, Routes } from "react-router-dom";
 import Providers from "./Providers";
+import Dashboard from "./scenes/dashboard";
 import Topbar from "./scenes/global/Topbar";
 
 const App = () => {
@@ -8,6 +9,9 @@ const App = () => {
       <div className="app">
         <main className="content">
           <Topbar />
+          <Routes>
+            <Route path="/" element={<Dashboard />} />
+          </Routes>
         </main>
       </div>
     </Providers>
