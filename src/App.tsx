@@ -1,7 +1,17 @@
-import { BrowserRouter, Route, Routes } from "react-router-dom";
+import { Route, Routes } from "react-router-dom";
 import Providers from "./Providers";
-import Dashboard from "./scenes/dashboard";
 import Topbar from "./scenes/global/Topbar";
+import Sidebar from "./scenes/global/Sidebar";
+import Dashboard from "./scenes/dashboard";
+// import Team from "./scenes/team";
+// import Invoices from "./scenes/invoices";
+// import Dashboard from "./scenes/dashboard";
+// import Dashboard from "./scenes/dashboard";
+// import Dashboard from "./scenes/dashboard";
+// import Dashboard from "./scenes/dashboard";
+// import Dashboard from "./scenes/dashboard";
+// import Dashboard from "./scenes/dashboard";
+// import Dashboard from "./scenes/dashboard";
 
 const App = () => {
   return (
