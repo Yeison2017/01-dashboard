@@ -17,10 +17,11 @@ import TimelineOutlinedIcon from "@mui/icons-material/TimelineOutlined";
 import MenuOutlinedIcon from "@mui/icons-material/MenuOutlined";
 import MapOutlinedIcon from "@mui/icons-material/MapOutlined";
 import Item from "./Item";
+import MenuItems from "./MenuItems";
 
 const Sidebar = () => {
   const [isCollapsed, setIsCollapsed] = useState<boolean>(false);
-  const [selected, setSelected] = useState("Dashboard");
+  // const [selected, setSelected] = useState("Dashboard");
 
   const theme = useTheme();
   const colors = tokens(theme.palette.mode);
@@ -103,19 +104,15 @@ const Sidebar = () => {
                 >
                   Ed Roh
                 </Typography>
-                <Typography variant="h2">VP Fancy Admin</Typography>
+                <Typography variant="h5" color={colors.greenAccent[500]}>
+                  VP Fancy Admin
+                </Typography>
               </Box>
             </Box>
           )}
 
           <Box paddingLeft={isCollapsed ? undefined : "10%"}>
-            <Item
-              title="Dashboard"
-              to="/"
-              Icon={HomeOutlinedIcon}
-              selected={selected}
-              setSelected={setSelected}
-            />
+            <MenuItems />
           </Box>
         </Menu>
       </ProSidebar>
