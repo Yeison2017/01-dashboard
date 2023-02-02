@@ -7,7 +7,8 @@ import SettingsOutlinedIcon from "@mui/icons-material/SettingsOutlined";
 import PersonOutlinedIcon from "@mui/icons-material/PersonOutlined";
 import SearchIcon from "@mui/icons-material/Search";
 
-import { ColorModeContext, tokens } from "../theme";
+import { ColorModeContext, tokens } from "../../../theme";
+import { styles } from "./styles";
 
 const Topbar = () => {
   const theme = useTheme();
@@ -16,7 +17,7 @@ const Topbar = () => {
   const colorMode = useContext(ColorModeContext);
 
   return (
-    <Box display="flex" justifyContent="space-between" p={2}>
+    <Box sx={styles.container}>
       <Box
         display="flex"
         sx={{ backgroundColor: colors.primary[400], marginRight: 3 }}
