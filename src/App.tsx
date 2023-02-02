@@ -1,5 +1,5 @@
 import Providers from "./Providers";
-import Topbar from "./scenes/global/Topbar";
+import Topbar from "./components/Topbar";
 import Sidebar from "./scenes/global/sidebar/Sidebar";
 import AppRoutes from "./routes/AppRoutes";
 // import Team from "./scenes/team";

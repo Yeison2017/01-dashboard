@@ -11,7 +11,7 @@ import PieChartOutlinedIcon from "@mui/icons-material/PieChartOutlined";
 import TimelineOutlinedIcon from "@mui/icons-material/TimelineOutlined";
 import MapOutlinedIcon from "@mui/icons-material/MapOutlined";
 
-import { IItem, TypeItem } from "../../../theme/interfaces";
+import { IItem, TypeItem } from "../../../interfaces";
 import Item from "./Item";
 import { Typography, useTheme } from "@mui/material";
 import { tokens } from "../../../theme";

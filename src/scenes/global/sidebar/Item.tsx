@@ -4,7 +4,7 @@ import { MenuItem } from "react-pro-sidebar";
 import { Link } from "react-router-dom";
 
 import { tokens } from "../../../theme";
-import { IItem } from "../../../theme/interfaces";
+import { IItem } from "../../../interfaces";
 
 type typeIcon = OverridableComponent<SvgIconTypeMap<{}, "svg">> & {
   muiName: string;
