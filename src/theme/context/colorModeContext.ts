@@ -1,4 +1,5 @@
 import { Context, createContext } from "react";
+
 import { IColorModeContext } from "../../interfaces/ITheme";
 
 // context for color mode

@@ -1,7 +1,7 @@
 import { PaletteMode } from "@mui/material";
+import { ITokens } from "../interfaces";
 
-export const tokens = (mode: PaletteMode) => ({
-  // export const tokens = (mode: string) => ({
+export const tokens = (mode: PaletteMode): ITokens => ({
   ...(mode === "dark"
     ? {
         grey: {

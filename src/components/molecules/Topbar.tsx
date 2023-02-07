@@ -1,5 +1,4 @@
-import { useContext } from "react";
-import { Box, IconButton, useTheme, InputBase } from "@mui/material";
+import { Box, IconButton } from "@mui/material";
 import LightModeOutlinedIcon from "@mui/icons-material/LightModeOutlined";
 import DarkModeOutlinedIcon from "@mui/icons-material/DarkModeOutlined";
 import NotificationsOutlinedIcon from "@mui/icons-material/NotificationsOutlined";
@@ -7,31 +6,28 @@ import SettingsOutlinedIcon from "@mui/icons-material/SettingsOutlined";
 import PersonOutlinedIcon from "@mui/icons-material/PersonOutlined";
 import SearchIcon from "@mui/icons-material/Search";
 
-import { ColorModeContext, tokens } from "../../../theme";
-import { styles } from "./styles";
+import { useTheme } from "../../hooks";
+import { IStyles } from "../../interfaces";
+import { Input } from "../";
+
+export const styles: IStyles = {
+  container: {
+    display: "flex",
+    justifyContent: "space-between",
+    p: 2,
+  },
+};
 
 const Topbar = () => {
-  const theme = useTheme();
-  const colors = tokens(theme.palette.mode);
-
-  const colorMode = useContext(ColorModeContext);
+  const { mode, toggleColorMode } = useTheme();
 
   return (
     <Box sx={styles.container}>
-      <Box
-        display="flex"
-        sx={{ backgroundColor: colors.primary[400], marginRight: 3 }}
-        borderRadius="3px"
-      >
-        <InputBase sx={{ ml: 2, flex: 1 }} placeholder="Search" />
-        <IconButton type="button" sx={{ p: 1 }}>
-          <SearchIcon />
-        </IconButton>
-      </Box>
+      <Input placeholder="Search" Icon={SearchIcon} />
 
       <Box display="flex">
-        <IconButton onClick={colorMode.toggleColorMode}>
-          {theme.palette.mode === "dark" ? (
+        <IconButton onClick={toggleColorMode}>
+          {mode === "dark" ? (
             <DarkModeOutlinedIcon />
           ) : (
             <LightModeOutlinedIcon />
