@@ -1,11 +1,6 @@
-import { useState } from "react";
-import { ProSidebar, Menu, MenuItem } from "react-pro-sidebar";
 import "react-pro-sidebar/dist/css/styles.css";
-import { Box, IconButton, Typography } from "@mui/material";
-import MenuOutlinedIcon from "@mui/icons-material/MenuOutlined";
+import { Box, Typography } from "@mui/material";
 
-import MenuItems from "./MenuItems";
-import { useTheme } from "../../../hooks";
 import { IStyles, IStylesSidebar, ITokens } from "../../../interfaces";
 
 const styles = (colors?: ITokens): IStyles => ({
