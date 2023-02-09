@@ -106,7 +106,11 @@ const MenuItems = () => {
     <>
       {Object.values(TypeItem).map((typeItem) => (
         <>
-          <Typography variant="h6" color={colors.grey[300]}>
+          <Typography
+            variant="h6"
+            color={colors.grey[300]}
+            sx={{ m: "15px 0 5px 20px" }}
+          >
             {typeItem}
           </Typography>
 

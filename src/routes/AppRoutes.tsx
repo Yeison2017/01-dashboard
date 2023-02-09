@@ -1,6 +1,6 @@
 import { Route, Routes } from "react-router-dom";
 import Dashboard from "../scenes/dashboard";
-import Sidebar from "../scenes/global/sidebar/Sidebar";
+import Sidebar from "../components/organisms/sidebar/Sidebar";
 
 const AppRoutes = () => {
   return (
