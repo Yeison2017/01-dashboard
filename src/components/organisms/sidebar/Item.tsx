@@ -10,7 +10,7 @@ type typeIcon = OverridableComponent<SvgIconTypeMap<{}, "svg">> & {
   muiName: string;
 };
 
-const Item = ({ title, to, Icon, selected, setSelected }: IItem) => {
+const Item = ({ title, to, Icon, selected, setSelected = () => {} }: IItem) => {
   const theme: Theme = useTheme();
 
   const colors = tokens(theme.palette.mode);
