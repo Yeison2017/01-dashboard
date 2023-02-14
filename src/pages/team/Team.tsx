@@ -106,7 +106,6 @@ const Team = () => {
     <Box sx={styles({}).container}>
       <Header title="TEAM" subtitle="Managing the Team Members" />
       <Box sx={styles({ colors }).containerGrid}>
-        {/* <DataGrid rows={mockDataTeam} columns={columns} /> */}
         <Table mockData={mockDataTeam} columns={columns} />
       </Box>
     </Box>
