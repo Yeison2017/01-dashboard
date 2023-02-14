@@ -1,13 +1,13 @@
 import { Box, Typography } from "@mui/material";
-import { DataGrid, GridColumns, GridRenderCellParams } from "@mui/x-data-grid";
+import { DataGrid, GridColumns } from "@mui/x-data-grid";
 import AdminPanelSettingsOutlinedIcon from "@mui/icons-material/AdminPanelSettingsOutlined";
 import SecurityOutlinedIcon from "@mui/icons-material/SecurityOutlined";
 import LockOpenOutlinedIcon from "@mui/icons-material/LockOpenOutlined";
 
-import { Header } from "../components";
-import { mockDataTeam } from "../data";
-import { useTheme } from "../hooks";
-import { IStyles, ITokens } from "../interfaces";
+import { Header, Table } from "../../components";
+import { mockDataTeam } from "../../data";
+import { useTheme } from "../../hooks";
+import { IStyles, ITokens } from "../../interfaces";
 
 interface IStylesProps {
   access?: string;
@@ -88,7 +88,7 @@ const Team = () => {
       flex: 1,
       renderCell: ({ row: { access } }) => {
         return (
-          <Box sx={styles({ access, colors }).access}>
+          <Box sx={styles({ access, colors }).accessLevel}>
             {access === "admin" && <AdminPanelSettingsOutlinedIcon />}
             {access === "manager" && <SecurityOutlinedIcon />}
             {access === "user" && <LockOpenOutlinedIcon />}
@@ -106,7 +106,8 @@ const Team = () => {
     <Box sx={styles({}).container}>
       <Header title="TEAM" subtitle="Managing the Team Members" />
       <Box sx={styles({ colors }).containerGrid}>
-        <DataGrid rows={mockDataTeam} columns={columns} />
+        {/* <DataGrid rows={mockDataTeam} columns={columns} /> */}
+        <Table mockData={mockDataTeam} columns={columns} />
       </Box>
     </Box>
   );
