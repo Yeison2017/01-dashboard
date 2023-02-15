@@ -1,7 +1,7 @@
 import { Box } from "@mui/material";
 
 import { Header } from "../components";
-import { IStyles, ITokens } from "../interfaces";
+import { IStyles } from "../interfaces";
 
 const styles: IStyles = {
   container: {

@@ -4,7 +4,7 @@ import AdminPanelSettingsOutlinedIcon from "@mui/icons-material/AdminPanelSettin
 import SecurityOutlinedIcon from "@mui/icons-material/SecurityOutlined";
 import LockOpenOutlinedIcon from "@mui/icons-material/LockOpenOutlined";
 
-import { Header, Table } from "../../components";
+import { Header } from "../../components";
 import { mockDataTeam } from "../../data";
 import { useTheme } from "../../hooks";
 import { IStyles, ITokens } from "../../interfaces";
@@ -106,7 +106,7 @@ const Team = () => {
     <Box sx={styles({}).container}>
       <Header title="TEAM" subtitle="Managing the Team Members" />
       <Box sx={styles({ colors }).containerGrid}>
-        <Table mockData={mockDataTeam} columns={columns} />
+        <DataGrid rows={mockDataTeam} columns={columns} />
       </Box>
     </Box>
   );
