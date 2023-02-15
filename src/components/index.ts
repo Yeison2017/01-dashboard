@@ -2,4 +2,8 @@ export { default as Header } from "./atoms/Header";
 export { default as Input } from "./atoms/Input";
 export { default as Table } from "./atoms/Table";
 export { default as Topbar } from "./molecules/Topbar";
+export { default as Item } from "./organisms/sidebar/Item";
+export { default as MenuItems } from "./organisms/sidebar/MenuItems";
+export { default as PerfilSidebar } from "./organisms/sidebar/PerfilSidebar";
 export { default as Sidebar } from "./organisms/sidebar/Sidebar";
+export { default as PageWithTable } from "./templates/PageWithTable";

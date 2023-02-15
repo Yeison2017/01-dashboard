@@ -5,8 +5,8 @@ import SecurityOutlinedIcon from "@mui/icons-material/SecurityOutlined";
 import LockOpenOutlinedIcon from "@mui/icons-material/LockOpenOutlined";
 
 import { mockDataTeam } from "../../data";
-import { useTheme } from "../../hooks";
 import { IStyles, ITokens } from "../../interfaces";
+import { useTheme } from "../../hooks";
 
 interface IStylesProps {
   access?: string;
