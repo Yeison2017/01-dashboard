@@ -1,5 +1,5 @@
 import { Route, Routes } from "react-router-dom";
-import { Contacts, Dashboard, Team, Invoices } from "../pages";
+import { Contacts, Dashboard, Team, Invoices, Form } from "../pages";
 
 const AppRoutes = () => {
   return (
@@ -8,6 +8,7 @@ const AppRoutes = () => {
       <Route path="/team" element={<Team />} />
       <Route path="/contacts" element={<Contacts />} />
       <Route path="/invoices" element={<Invoices />} />
+      <Route path="/form" element={<Form />} />
     </Routes>
   );
 };
