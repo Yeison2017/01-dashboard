@@ -1,6 +1,6 @@
 import { Box } from "@mui/material";
 
-import { Header } from "../../components";
+import { TitlePage } from "../../components";
 import { useTheme } from "../../hooks";
 import { IStyles, ITokens } from "../../interfaces";
 
@@ -55,7 +55,7 @@ const PageWithTable = ({
 
   return (
     <Box sx={styles().container}>
-      <Header title={title.toLocaleUpperCase()} subtitle={subtitle} />
+      <TitlePage title={title.toLocaleUpperCase()} subtitle={subtitle} />
       <Box sx={styles(colors, addStylesGrid).containerGrid}>{children}</Box>
     </Box>
   );

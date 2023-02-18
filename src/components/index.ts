@@ -1,4 +1,4 @@
-export { default as Header } from "./atoms/Header";
+export { default as TitlePage } from "./atoms/TitlePage";
 export { default as Input } from "./atoms/Input";
 export { default as InputForm } from "./atoms/InputForm";
 export { default as Table } from "./atoms/Table";

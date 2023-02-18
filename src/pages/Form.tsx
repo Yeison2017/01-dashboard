@@ -3,7 +3,7 @@ import { Formik } from "formik";
 import * as yup from "yup";
 import useMediaQuery from "@mui/material/useMediaQuery";
 
-import { Header, InputForm } from "../components";
+import { TitlePage, InputForm } from "../components";
 import { IStyles, IUser } from "../interfaces";
 
 const styles = (isNonMobile?: boolean): IStyles => ({
@@ -57,7 +57,7 @@ const Form = () => {
   };
   return (
     <Box sx={styles().container}>
-      <Header title="CREATE USER" subtitle="Cretae a New User Profile" />
+      <TitlePage title="CREATE USER" subtitle="Cretae a New User Profile" />
 
       <Formik
         onSubmit={handleFormSubmit}

@@ -1,6 +1,6 @@
 import { Box } from "@mui/material";
 
-import { Header } from "../components";
+import { TitlePage } from "../components";
 import { IStyles } from "../interfaces";
 
 const styles: IStyles = {
@@ -18,7 +18,7 @@ const Dashboard = () => {
   return (
     <Box sx={styles.container}>
       <Box sx={styles.containerHeader}>
-        <Header title="DASHBOARD" subtitle="Welcome to your dashboard" />
+        <TitlePage title="DASHBOARD" subtitle="Welcome to your dashboard" />
       </Box>
     </Box>
   );

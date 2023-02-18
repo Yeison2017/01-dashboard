@@ -15,12 +15,12 @@ const styles = (colors?: ITokens): IStyles => ({
   },
 });
 
-interface IHeader {
+interface ITitlePage {
   title: string;
   subtitle: string;
 }
 
-const Header = ({ title, subtitle }: IHeader) => {
+const TitlePage = ({ title, subtitle }: ITitlePage) => {
   const { colors } = useTheme();
 
   return (
@@ -36,4 +36,4 @@ const Header = ({ title, subtitle }: IHeader) => {
   );
 };
 
-export default Header;
+export default TitlePage;
