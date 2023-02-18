@@ -19,8 +19,7 @@ const styles = (colors?: ITokens): IStyles => ({
   },
 });
 
-const Input = (props: IInput) => {
-  const { Icon } = props;
+const Input = ({ Icon, ...props }: IInput) => {
   const { colors } = useTheme();
 
   return (

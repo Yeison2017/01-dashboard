@@ -25,7 +25,6 @@ const InputForm = <T extends FormikProps<any>>({
   ...props
 }: IInputFormProps<T>) => {
   const { values, handleBlur, handleChange, touched, errors } = formik;
-  console.log("name: ", name);
 
   return (
     <TextField

@@ -1,4 +1,4 @@
-import { Box } from "@mui/material";
+import { Box, Button } from "@mui/material";
 import { Formik } from "formik";
 import * as yup from "yup";
 import useMediaQuery from "@mui/material/useMediaQuery";
@@ -18,6 +18,11 @@ const styles = (isNonMobile?: boolean): IStyles => ({
       gridColumn: isNonMobile ? undefined : "span 4",
     },
   },
+  containerButton: {
+    display: "flex",
+    justifyContent: "end",
+    mt: "20px",
+  },
 });
 
 const initialValues: IUser = {
@@ -32,10 +37,10 @@ const initialValues: IUser = {
 const phoneRegExp =
   /^((\+[1-9]{1,4}[ -]?)|(\([0-9]{2,3}\)[ -]?)|([0-9]{2,4})[ -]?)*?[0-9]{3,4}[ -]?[0-9]{3,4}$/;
 
-const userShema = yup.object().shape({
+const userShema: yup.SchemaOf<IUser> = yup.object().shape({
   firstName: yup.string().required("required"),
   lastName: yup.string().required("required"),
-  emial: yup.string().email("invalid email").required("required"),
+  email: yup.string().email("invalid email").required("required"),
   contact: yup
     .string()
     .matches(phoneRegExp, "Phone number is not valid")
@@ -47,7 +52,9 @@ const userShema = yup.object().shape({
 const Form = () => {
   const isNonMobile = useMediaQuery("(min-width: 600px)");
 
-  const handleFormSubmit = (values: IUser) => {};
+  const handleFormSubmit = (values: IUser) => {
+    console.log("values: ", values);
+  };
   return (
     <Box sx={styles().container}>
       <Header title="CREATE USER" subtitle="Cretae a New User Profile" />
@@ -84,20 +91,12 @@ const Form = () => {
               <InputForm formik={props} label="Contact Number" name="contact" />
               <InputForm formik={props} label="Address 1" name="address1" />
               <InputForm formik={props} label="Address 2" name="address2" />
+            </Box>
 
-              {/* <TextField
-                fullWidth
-                variant="filled"
-                type="text"
-                label="Fist Name"
-                onBlur={handleBlur}
-                onChange={handleChange}
-                value={values.firstName}
-                name="fistName"
-                error={!!props.touched.firstName && !!errors.firstName}
-                helperText={!!touched.firstName && !!errors.firstName}
-                sx={{ gridColumn: "span 2" }}
-              /> */}
+            <Box sx={styles().containerButton}>
+              <Button type="submit" variant="contained" color="secondary">
+                Create New User
+              </Button>
             </Box>
           </form>
         )}

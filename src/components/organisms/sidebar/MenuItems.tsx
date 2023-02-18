@@ -116,9 +116,10 @@ const MenuItems = () => {
 
           {items
             .filter((item) => item.typeItem === typeItem)
-            .map(({ id, title, to, Icon }) => (
+            .map(({ id, title, to, Icon }, index: number) => (
               <Item
                 key={id}
+                // key={index}
                 title={title}
                 to={to}
                 Icon={Icon}
