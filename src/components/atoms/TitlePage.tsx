@@ -26,7 +26,7 @@ const TitlePage = ({ title, subtitle }: ITitlePage) => {
   return (
     <Box sx={styles().container}>
       <Typography variant="h2" sx={styles(colors).title}>
-        {title}
+        {title.toLocaleUpperCase()}
       </Typography>
 
       <Typography variant="h5" sx={styles(colors).subtitle}>

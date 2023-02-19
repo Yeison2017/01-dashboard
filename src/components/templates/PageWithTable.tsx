@@ -3,14 +3,12 @@ import { Box } from "@mui/material";
 import { TitlePage } from "../../components";
 import { useTheme } from "../../hooks";
 import { IStyles, ITokens } from "../../interfaces";
+import PageLayout from "./PageLayout";
 
 const styles = (
   colors?: ITokens,
   addStylesGrid?: object | undefined
 ): IStyles => ({
-  container: {
-    m: "20px",
-  },
   containerGrid: {
     m: "40px 0 0 0",
     height: "75vh",
@@ -54,10 +52,9 @@ const PageWithTable = ({
   const { colors } = useTheme();
 
   return (
-    <Box sx={styles().container}>
-      <TitlePage title={title.toLocaleUpperCase()} subtitle={subtitle} />
+    <PageLayout title={title} subtitle={subtitle}>
       <Box sx={styles(colors, addStylesGrid).containerGrid}>{children}</Box>
-    </Box>
+    </PageLayout>
   );
 };
 

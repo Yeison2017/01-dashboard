@@ -1,6 +1,6 @@
 import { Box } from "@mui/material";
 
-import { TitlePage } from "../components";
+import { PageLayout, TitlePage } from "../components";
 import { IStyles } from "../interfaces";
 
 const styles: IStyles = {
@@ -16,11 +16,13 @@ const styles: IStyles = {
 
 const Dashboard = () => {
   return (
-    <Box sx={styles.container}>
+    // <Box sx={styles.container}>
+    <PageLayout title="DASHBOARD" subtitle="Welcome to your dashboard">
       <Box sx={styles.containerHeader}>
-        <TitlePage title="DASHBOARD" subtitle="Welcome to your dashboard" />
+        {/* <TitlePage title="DASHBOARD" subtitle="Welcome to your dashboard" /> */}
       </Box>
-    </Box>
+    </PageLayout>
+    // </Box>
   );
 };
 

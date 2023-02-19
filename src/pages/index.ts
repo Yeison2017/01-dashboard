@@ -1,4 +1,4 @@
-export { default as Calendar } from "./Calendar";
+export { default as Calendar } from "./CalendarPage";
 export { default as Dashboard } from "./Dashboard";
 export { default as Form } from "./Form";
 export { default as Contacts } from "./contacts/Contacts";

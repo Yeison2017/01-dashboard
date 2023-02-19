@@ -3,13 +3,10 @@ import { Formik } from "formik";
 import * as yup from "yup";
 import useMediaQuery from "@mui/material/useMediaQuery";
 
-import { TitlePage, InputForm } from "../components";
+import { InputForm, PageLayout } from "../components";
 import { IStyles, IUser } from "../interfaces";
 
 const styles = (isNonMobile?: boolean): IStyles => ({
-  container: {
-    m: "20px",
-  },
   containerForm: {
     display: "grid",
     gap: "30px",
@@ -56,22 +53,12 @@ const Form = () => {
     console.log("values: ", values);
   };
   return (
-    <Box sx={styles().container}>
-      <TitlePage title="CREATE USER" subtitle="Cretae a New User Profile" />
-
+    <PageLayout title="CREATE USER" subtitle="Cretae a New User Profile">
       <Formik
         onSubmit={handleFormSubmit}
         initialValues={initialValues}
         validationSchema={userShema}
       >
-        {/* {({
-          values,
-          errors,
-          touched,
-          handleBlur,
-          handleChange,
-          handleSubmit,
-        }) => ( */}
         {(props) => (
           <form onSubmit={props.handleSubmit}>
             <Box sx={styles(isNonMobile).containerForm}>
@@ -101,7 +88,7 @@ const Form = () => {
           </form>
         )}
       </Formik>
-    </Box>
+    </PageLayout>
   );
 };
 
