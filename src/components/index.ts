@@ -1,3 +1,4 @@
+export { default as BarChart } from "./atoms/BarChart";
 export { default as Input } from "./atoms/Input";
 export { default as InputForm } from "./atoms/InputForm";
 export { default as Table } from "./atoms/Table";

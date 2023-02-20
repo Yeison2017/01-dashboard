@@ -7,6 +7,7 @@ import {
   Form,
   CalendarPage,
   FaqPage,
+  BarPage,
 } from "../pages";
 
 const AppRoutes = () => {
@@ -19,6 +20,7 @@ const AppRoutes = () => {
       <Route path="/form" element={<Form />} />
       <Route path="/calendar" element={<CalendarPage />} />
       <Route path="/faq" element={<FaqPage />} />
+      <Route path="/bar" element={<BarPage />} />
     </Routes>
   );
 };
