@@ -1,6 +1,7 @@
 export { default as BarChart } from "./atoms/BarChart";
 export { default as Input } from "./atoms/Input";
 export { default as InputForm } from "./atoms/InputForm";
+export { default as PieChart } from "./atoms/PieChart";
 export { default as Table } from "./atoms/Table";
 export { default as TitlePage } from "./atoms/TitlePage";
 export { default as Faq } from "./molecules/Faq";

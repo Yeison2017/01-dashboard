@@ -8,6 +8,7 @@ import {
   CalendarPage,
   FaqPage,
   BarPage,
+  PiePage,
 } from "../pages";
 
 const AppRoutes = () => {
@@ -21,6 +22,7 @@ const AppRoutes = () => {
       <Route path="/calendar" element={<CalendarPage />} />
       <Route path="/faq" element={<FaqPage />} />
       <Route path="/bar" element={<BarPage />} />
+      <Route path="/pie" element={<PiePage />} />
     </Routes>
   );
 };

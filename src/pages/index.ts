@@ -3,6 +3,7 @@ export { default as CalendarPage } from "./CalendarPage";
 export { default as Dashboard } from "./Dashboard";
 export { default as FaqPage } from "./FaqPage";
 export { default as Form } from "./Form";
+export { default as PiePage } from "./PiePage";
 export { default as Contacts } from "./contacts/Contacts";
 export { default as ContactsTable } from "./contacts/ContactsTable";
 export { default as Invoices } from "./invoices/Invoices";
