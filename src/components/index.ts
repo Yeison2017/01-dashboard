@@ -2,6 +2,7 @@ export { default as Input } from "./atoms/Input";
 export { default as InputForm } from "./atoms/InputForm";
 export { default as Table } from "./atoms/Table";
 export { default as TitlePage } from "./atoms/TitlePage";
+export { default as Faq } from "./molecules/Faq";
 export { default as Topbar } from "./molecules/Topbar";
 export { default as Calendar } from "./organisms/Calendar";
 export { default as Item } from "./organisms/sidebar/Item";

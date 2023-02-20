@@ -6,7 +6,7 @@ import {
   Invoices,
   Form,
   CalendarPage,
-  Fab,
+  FaqPage,
 } from "../pages";
 
 const AppRoutes = () => {
@@ -18,7 +18,7 @@ const AppRoutes = () => {
       <Route path="/invoices" element={<Invoices />} />
       <Route path="/form" element={<Form />} />
       <Route path="/calendar" element={<CalendarPage />} />
-      <Route path="/faq" element={<Fab />} />
+      <Route path="/faq" element={<FaqPage />} />
     </Routes>
   );
 };
