@@ -10,6 +10,7 @@ import {
   BarPage,
   PiePage,
   LinePage,
+  GeographyPage,
 } from "../pages";
 
 const AppRoutes = () => {
@@ -25,6 +26,7 @@ const AppRoutes = () => {
       <Route path="/bar" element={<BarPage />} />
       <Route path="/pie" element={<PiePage />} />
       <Route path="/line" element={<LinePage />} />
+      <Route path="/geography" element={<GeographyPage />} />
     </Routes>
   );
 };

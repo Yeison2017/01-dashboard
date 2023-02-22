@@ -3,11 +3,11 @@ import { ResponsiveBar } from "@nivo/bar";
 import { mockBarData as data } from "../../data/mockData";
 import { useTheme } from "../../hooks";
 
-interface IBarPageProps {
+interface IBarProps {
   isDashboard: boolean;
 }
 
-const BarChart = ({ isDashboard = false }: IBarPageProps) => {
+const BarChart = ({ isDashboard = false }: IBarProps) => {
   const { colors } = useTheme();
   return (
     <ResponsiveBar

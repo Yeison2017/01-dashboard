@@ -3,6 +3,7 @@ export { default as CalendarPage } from "./CalendarPage";
 export { default as Dashboard } from "./Dashboard";
 export { default as FaqPage } from "./FaqPage";
 export { default as Form } from "./Form";
+export { default as GeographyPage } from "./GeographyPage";
 export { default as LinePage } from "./LinePage";
 export { default as PiePage } from "./PiePage";
 export { default as Contacts } from "./contacts/Contacts";
