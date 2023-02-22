@@ -9,6 +9,7 @@ import {
   FaqPage,
   BarPage,
   PiePage,
+  LinePage,
 } from "../pages";
 
 const AppRoutes = () => {
@@ -23,6 +24,7 @@ const AppRoutes = () => {
       <Route path="/faq" element={<FaqPage />} />
       <Route path="/bar" element={<BarPage />} />
       <Route path="/pie" element={<PiePage />} />
+      <Route path="/line" element={<LinePage />} />
     </Routes>
   );
 };

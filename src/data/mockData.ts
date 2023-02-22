@@ -1,3 +1,4 @@
+import { Serie } from "@nivo/line";
 import { tokens } from "../theme";
 
 export const mockDataTeam = [
@@ -430,7 +431,7 @@ export const mockPieData = [
   },
 ];
 
-export const mockLineData = [
+export const mockLineData: Serie[] = [
   {
     id: "japan",
     color: tokens("dark").greenAccent[500],
