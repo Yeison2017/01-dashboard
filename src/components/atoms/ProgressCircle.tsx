@@ -11,11 +11,9 @@ interface Styles {
 
 const styles = ({ colors, angle, size }: Styles): IStyles => ({
   container: {
-    backgroundColor: `
-            radial-gradient(${colors?.primary[400]} 55%, transparent 56%),
+    background: `radial-gradient(${colors?.primary[400]} 55%, transparent 56%),
             conic-gradient(transparent 0deg ${angle}deg, ${colors.blueAccent[500]} ${angle}deg 360deg),
-            ${colors?.greenAccent[500]}
-            `,
+            ${colors?.greenAccent[500]}`,
     borderRadius: "50%",
     width: `${size}px`,
     height: `${size}px`,
@@ -24,7 +22,7 @@ const styles = ({ colors, angle, size }: Styles): IStyles => ({
 
 interface ProgressCircleProps {
   progress: string;
-  size: string;
+  size?: string;
 }
 
 const ProgressCircle = ({
@@ -32,7 +30,7 @@ const ProgressCircle = ({
   size = "40",
 }: ProgressCircleProps) => {
   const { colors } = useTheme();
-  const angle: number = parseInt(progress) * 360;
+  const angle: number = parseFloat(progress) * 360;
 
   return <Box sx={styles({ colors, angle, size }).container} />;
 };
