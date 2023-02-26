@@ -60,7 +60,6 @@ const LineChart = ({ isDashboard = false }: ILineChartProps) => {
       axisTop={null}
       axisRight={null}
       axisBottom={{
-        // orient: "bottom",
         tickSize: 5,
         tickPadding: 5,
         tickRotation: 0,
@@ -69,7 +68,6 @@ const LineChart = ({ isDashboard = false }: ILineChartProps) => {
         legendPosition: "middle",
       }}
       axisLeft={{
-        // orient: "left",
         tickValues: 5,
         tickSize: 5,
         tickPadding: 5,

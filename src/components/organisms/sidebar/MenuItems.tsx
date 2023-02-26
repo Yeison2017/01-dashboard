@@ -13,8 +13,23 @@ import MapOutlinedIcon from "@mui/icons-material/MapOutlined";
 
 import { IItem, TypeItem } from "../../../interfaces";
 import Item from "./Item";
-import { Typography, useTheme } from "@mui/material";
-import { tokens } from "../../../theme";
+import { Box, Typography } from "@mui/material";
+import { useTheme } from "../../../hooks";
+import { MainRoutesName } from "../../../helpers";
+
+const {
+  main,
+  team,
+  contacts,
+  invoices,
+  form,
+  calendar,
+  faq,
+  bar,
+  pie,
+  line,
+  geography,
+} = MainRoutesName;
 
 const items: IItem[] = [
   {
@@ -99,13 +114,12 @@ const items: IItem[] = [
 const MenuItems = () => {
   const [selected, setSelected] = useState<string>("Dashboard");
 
-  const theme = useTheme();
-  const colors = tokens(theme.palette.mode);
+  const { colors } = useTheme();
 
   return (
     <>
-      {Object.values(TypeItem).map((typeItem) => (
-        <>
+      {Object.values(TypeItem).map((typeItem, index) => (
+        <Box key={`${typeItem}_${index}`}>
           <Typography
             variant="h6"
             color={colors.grey[300]}
@@ -114,20 +128,20 @@ const MenuItems = () => {
             {typeItem}
           </Typography>
 
-          {items
-            .filter((item) => item.typeItem === typeItem)
-            .map(({ id, title, to, Icon }, index: number) => (
-              <Item
-                key={id}
-                // key={index}
-                title={title}
-                to={to}
-                Icon={Icon}
-                selected={selected}
-                setSelected={setSelected}
-              />
-            ))}
-        </>
+          {items &&
+            items
+              .filter((item) => item.typeItem === typeItem)
+              .map(({ id, title, to, Icon }) => (
+                <Item
+                  key={id}
+                  title={title}
+                  to={to}
+                  Icon={Icon}
+                  selected={selected}
+                  setSelected={setSelected}
+                />
+              ))}
+        </Box>
       ))}
     </>
   );
