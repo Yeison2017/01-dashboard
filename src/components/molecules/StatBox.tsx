@@ -53,7 +53,6 @@ const StatBox = ({
       <Box sx={styles().containerFlex}>
         <Box>
           {Icon}
-          {/* <Icon /> */}
           <Typography variant="h4" sx={styles(colors).title}>
             {title}
           </Typography>
