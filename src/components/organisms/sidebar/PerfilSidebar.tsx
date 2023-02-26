@@ -32,24 +32,20 @@ const stylesSidebar: IStylesSidebar = {
   },
 };
 
-interface IPerfilSidebar {
+interface PerfilSidebarProps {
   isCollapsed: boolean;
   colors: ITokens;
 }
 
-const PerfilSidebar = ({ isCollapsed, colors }: IPerfilSidebar) => {
+import imageUser from "../../../assets/user.png";
+
+const PerfilSidebar = ({ isCollapsed, colors }: PerfilSidebarProps) => {
   return (
     <>
       {!isCollapsed && (
         <Box sx={styles().perfilContainer}>
           <Box sx={styles().imageContainer}>
-            <img
-              src={
-                "https://res.cloudinary.com/dyvccdkkl/image/upload/v1675982208/User_hga8rc.png"
-              }
-              alt="profile-user"
-              style={stylesSidebar.img}
-            />
+            <img src={imageUser} alt="profile-user" style={stylesSidebar.img} />
           </Box>
 
           <Box textAlign="center">

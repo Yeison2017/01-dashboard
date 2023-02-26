@@ -1,6 +1,5 @@
 import { Box } from "@mui/material";
 
-import { TitlePage } from "../../components";
 import { useTheme } from "../../hooks";
 import { IStyles, ITokens } from "../../interfaces";
 import PageLayout from "./PageLayout";

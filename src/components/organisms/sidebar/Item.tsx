@@ -1,14 +1,9 @@
-import { SvgIconTypeMap, Typography, useTheme, Theme } from "@mui/material";
-import { OverridableComponent } from "@mui/material/OverridableComponent";
+import { Typography, useTheme, Theme } from "@mui/material";
 import { MenuItem } from "react-pro-sidebar";
 import { Link } from "react-router-dom";
 
 import { tokens } from "../../../theme";
 import { IItem } from "../../../interfaces";
-
-type typeIcon = OverridableComponent<SvgIconTypeMap<{}, "svg">> & {
-  muiName: string;
-};
 
 const Item = ({ title, to, Icon, selected, setSelected = () => {} }: IItem) => {
   const theme: Theme = useTheme();
