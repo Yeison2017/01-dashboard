@@ -1,21 +1,22 @@
 import { useState } from "react";
-import { PageWithTable } from "../../components";
-import ContactsTable from "./ContactsTable";
 
-const Contacts = () => {
+import { PageWithTable } from "../../components";
+import InvoicesTable from "./InvoicesTable";
+
+const InvoicesPage = () => {
   const [addStylesGrid, setAddStylesGrid] = useState<object | undefined>(
     undefined
   );
 
   return (
     <PageWithTable
-      title="CONTACTS"
-      subtitle="List of Contacts for Future Reference"
+      title="INVOICE"
+      subtitle="List of Invoice Balances"
       addStylesGrid={addStylesGrid}
     >
-      <ContactsTable setAddStylesGrid={setAddStylesGrid} />
+      <InvoicesTable setAddStylesGrid={setAddStylesGrid} />
     </PageWithTable>
   );
 };
 
-export default Contacts;
+export default InvoicesPage;

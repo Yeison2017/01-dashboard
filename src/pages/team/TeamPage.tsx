@@ -1,7 +1,7 @@
 import { PageWithTable } from "../../components";
 import TeamTable from "./TeamTable";
 
-const Team = () => {
+const TeamPage = () => {
   return (
     <PageWithTable title="Team" subtitle="Managing the Team Members">
       <TeamTable />
@@ -9,4 +9,4 @@ const Team = () => {
   );
 };
 
-export default Team;
+export default TeamPage;

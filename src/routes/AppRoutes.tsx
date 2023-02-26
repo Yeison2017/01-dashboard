@@ -1,10 +1,11 @@
 import { Route, Routes } from "react-router-dom";
+import { MainRoutesName } from "../helpers";
 import {
-  Contacts,
+  ContactsPage,
   Dashboard,
-  Team,
-  Invoices,
-  Form,
+  TeamPage,
+  InvoicesPage,
+  FormPage,
   CalendarPage,
   FaqPage,
   BarPage,
@@ -14,19 +15,32 @@ import {
 } from "../pages";
 
 const AppRoutes = () => {
+  const {
+    main,
+    team,
+    contacts,
+    invoices,
+    form,
+    calendar,
+    faq,
+    bar,
+    pie,
+    line,
+    geography,
+  } = MainRoutesName;
   return (
     <Routes>
-      <Route path="/" element={<Dashboard />} />
-      <Route path="/team" element={<Team />} />
-      <Route path="/contacts" element={<Contacts />} />
-      <Route path="/invoices" element={<Invoices />} />
-      <Route path="/form" element={<Form />} />
-      <Route path="/calendar" element={<CalendarPage />} />
-      <Route path="/faq" element={<FaqPage />} />
-      <Route path="/bar" element={<BarPage />} />
-      <Route path="/pie" element={<PiePage />} />
-      <Route path="/line" element={<LinePage />} />
-      <Route path="/geography" element={<GeographyPage />} />
+      <Route path={main} element={<Dashboard />} />
+      <Route path={team} element={<TeamPage />} />
+      <Route path={contacts} element={<ContactsPage />} />
+      <Route path={invoices} element={<InvoicesPage />} />
+      <Route path={form} element={<FormPage />} />
+      <Route path={calendar} element={<CalendarPage />} />
+      <Route path={faq} element={<FaqPage />} />
+      <Route path={bar} element={<BarPage />} />
+      <Route path={pie} element={<PiePage />} />
+      <Route path={line} element={<LinePage />} />
+      <Route path={geography} element={<GeographyPage />} />
     </Routes>
   );
 };

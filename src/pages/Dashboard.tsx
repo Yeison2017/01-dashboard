@@ -8,7 +8,6 @@ import PointOfSaleIcon from "@mui/icons-material/PointOfSale";
 import TrafficIcon from "@mui/icons-material/Traffic";
 
 import {
-  PageLayout,
   LineChart,
   BarChart,
   GeographyChart,
