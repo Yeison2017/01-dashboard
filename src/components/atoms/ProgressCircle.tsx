@@ -21,7 +21,7 @@ const styles = ({ colors, angle, size }: Styles): IStyles => ({
 });
 
 interface ProgressCircleProps {
-  progress: string;
+  progress?: string;
   size?: string;
 }
 
