@@ -10,6 +10,7 @@ export { default as TitlePage } from "./atoms/TitlePage";
 export { default as Faq } from "./molecules/Faq";
 export { default as StatBox } from "./molecules/StatBox";
 export { default as StatCampaign } from "./molecules/StatCampaign";
+export { default as StatGeographyTraffic } from "./molecules/StatGeographyTraffic";
 export { default as StatRecentTransactions } from "./molecules/StatRecentTransactions";
 export { default as StatRevenueGenerated } from "./molecules/StatRevenueGenerated";
 export { default as StatSalesQuantity } from "./molecules/StatSalesQuantity";

@@ -1,14 +1,14 @@
-import { Box, Button, Typography } from "@mui/material";
+import { Box, Button } from "@mui/material";
 import DownloadOutlinedIcon from "@mui/icons-material/DownloadOutlined";
 
 import {
-  GeographyChart,
   TitlePage,
   StatBoxCard,
   StatRevenueGenerated,
   StatRecentTransactions,
   StatCampaign,
   StatSalesQuantity,
+  StatGeographyTraffic,
 } from "../components";
 import { IStyles, ITokens } from "../interfaces";
 import { useTheme } from "../hooks";
@@ -102,19 +102,7 @@ const Dashboard = () => {
         <StatSalesQuantity />
 
         {/*  */}
-        <Box
-          gridColumn="span 4"
-          gridRow="span 2"
-          sx={{ backgroundColor: colors.primary[400] }}
-          p="30px"
-        >
-          <Typography variant="h5" fontWeight="600" sx={{ mb: "15px" }}>
-            Geography Based Traffic
-          </Typography>
-          <Box height="200px">
-            <GeographyChart isDashboard={true} />
-          </Box>
-        </Box>
+        <StatGeographyTraffic />
       </Box>
     </Box>
   );
