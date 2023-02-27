@@ -1,8 +1,6 @@
-import { Box, SvgIconTypeMap, Typography } from "@mui/material";
-import { OverridableComponent } from "@mui/material/OverridableComponent";
-import { ReactElement } from "react";
+import { Box, Typography } from "@mui/material";
 import { useTheme } from "../../hooks";
-import { IStyles, ITokens } from "../../interfaces";
+import { IStyles, ITokens, StatBoxProps } from "../../interfaces";
 import ProgressCircle from "../atoms/ProgressCircle";
 
 const styles = (colors?: ITokens): IStyles => ({
@@ -13,6 +11,10 @@ const styles = (colors?: ITokens): IStyles => ({
   containerFlex: {
     display: "flex",
     justifyContent: "space-between",
+  },
+  icon: {
+    color: colors?.greenAccent[600],
+    fontSize: "26px",
   },
   title: {
     fontWeight: "bold",
@@ -27,18 +29,6 @@ const styles = (colors?: ITokens): IStyles => ({
   },
 });
 
-interface StatBoxProps {
-  title: string;
-  subtitle: string;
-  Icon: ReactElement<
-    OverridableComponent<SvgIconTypeMap<{}, "svg">> & {
-      muiName: string;
-    }
-  >;
-  progress: string;
-  increase: string;
-}
-
 const StatBox = ({
   title,
   subtitle,
@@ -52,7 +42,7 @@ const StatBox = ({
     <Box sx={styles().container}>
       <Box sx={styles().containerFlex}>
         <Box>
-          {Icon}
+          <Icon sx={styles(colors).icon} />
           <Typography variant="h4" sx={styles(colors).title}>
             {title}
           </Typography>

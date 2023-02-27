@@ -17,3 +17,4 @@ export { default as PerfilSidebar } from "./organisms/sidebar/PerfilSidebar";
 export { default as Sidebar } from "./organisms/sidebar/Sidebar";
 export { default as PageLayout } from "./templates/PageLayout";
 export { default as PageWithTable } from "./templates/PageWithTable";
+export { default as StatBoxCard } from "./templates/StatBoxCard";
