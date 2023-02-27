@@ -6,6 +6,11 @@ import { IStyles, ITokens } from "../../interfaces";
 import LineChart from "../atoms/LineChart";
 
 const styles = (colors?: ITokens): IStyles => ({
+  container: {
+    gridColumn: "span 8",
+    gridRow: "span 2",
+    backgroundColor: colors?.primary[400],
+  },
   headerTitle: {
     mt: "25px",
     p: "0 30px",
@@ -34,7 +39,7 @@ const styles = (colors?: ITokens): IStyles => ({
 const StatRevenueGenerated = () => {
   const { colors } = useTheme();
   return (
-    <>
+    <Box sx={styles(colors).container}>
       <Box sx={styles().headerTitle}>
         <Box>
           <Typography sx={styles(colors).title} variant="h5">
@@ -54,7 +59,7 @@ const StatRevenueGenerated = () => {
       <Box sx={styles().containerChart}>
         <LineChart isDashboard={true} />
       </Box>
-    </>
+    </Box>
   );
 };
 

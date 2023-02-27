@@ -39,11 +39,7 @@ const styles = (colors?: ITokens): IStyles => ({
     gridAutoRows: "140px",
     gap: "20px",
   },
-  containerRow2: {
-    gridColumn: "span 8",
-    gridRow: "span 2",
-    backgroundColor: colors?.primary[400],
-  },
+
   row2: {
     mt: "25px",
     p: "0 30px",
@@ -90,9 +86,7 @@ const Dashboard = () => {
         ))}
 
         {/* ROW 2 */}
-        <Box sx={styles(colors).containerRow2}>
-          <StatRevenueGenerated />
-        </Box>
+        <StatRevenueGenerated />
         <Box sx={styles(colors).containerTransition}>
           <StatRecentTransactions />
         </Box>
@@ -100,8 +94,6 @@ const Dashboard = () => {
         {/* ROW 3 */}
         <StatCampaign />
         <StatSalesQuantity />
-
-        {/*  */}
         <StatGeographyTraffic />
       </Box>
     </Box>
