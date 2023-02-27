@@ -2,19 +2,15 @@ import { Box, Button, IconButton, Typography } from "@mui/material";
 
 import { mockTransactions } from "../data/mockData";
 import DownloadOutlinedIcon from "@mui/icons-material/DownloadOutlined";
-import PersonAddIcon from "@mui/icons-material/PersonAdd";
-import EmailIcon from "@mui/icons-material/Email";
-import PointOfSaleIcon from "@mui/icons-material/PointOfSale";
-import TrafficIcon from "@mui/icons-material/Traffic";
 
 import {
   LineChart,
   BarChart,
   GeographyChart,
-  StatBox,
   ProgressCircle,
   TitlePage,
   StatBoxCard,
+  StatRevenueGenerated,
 } from "../components";
 import { IStyles, ITokens } from "../interfaces";
 import { useTheme } from "../hooks";
@@ -97,36 +93,9 @@ const Dashboard = () => {
 
         {/* ROW 2 */}
         <Box sx={styles(colors).containerRow2}>
-          <Box sx={styles().row2}>
-            <Box>
-              <Typography
-                variant="h5"
-                fontWeight="600"
-                color={colors.grey[100]}
-              >
-                Revenue Generated
-              </Typography>
-              <Typography
-                variant="h3"
-                fontWeight="bold"
-                color={colors.greenAccent[500]}
-              >
-                $59,342,32
-              </Typography>
-            </Box>
-
-            <Box>
-              <IconButton>
-                <DownloadOutlinedIcon
-                  sx={{ fontSize: "26px", color: colors.greenAccent[500] }}
-                />
-              </IconButton>
-            </Box>
-          </Box>
-          <Box height="250px" mt="-20px">
-            <LineChart isDashboard={true} />
-          </Box>
+          <StatRevenueGenerated />
         </Box>
+
         {/* TRANSACTIONS */}
         <Box sx={styles(colors).containerTransition}>
           <Box sx={styles(colors).cartTransition}>
