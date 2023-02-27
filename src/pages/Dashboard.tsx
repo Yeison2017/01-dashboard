@@ -11,6 +11,7 @@ import {
   StatRevenueGenerated,
   StatRecentTransactions,
   StatCampaign,
+  StatSalesQuantity,
 } from "../components";
 import { IStyles, ITokens } from "../interfaces";
 import { useTheme } from "../hooks";
@@ -95,32 +96,13 @@ const Dashboard = () => {
         <Box sx={styles(colors).containerRow2}>
           <StatRevenueGenerated />
         </Box>
-
-        {/* TRANSACTIONS */}
         <Box sx={styles(colors).containerTransition}>
           <StatRecentTransactions />
         </Box>
 
         {/* ROW 3 */}
         <StatCampaign />
-
-        {/*  */}
-        <Box
-          gridColumn="span 4"
-          gridRow="span 2"
-          sx={{ backgroundColor: colors.primary[400] }}
-        >
-          <Typography
-            variant="h5"
-            fontWeight="600"
-            sx={{ p: "30px 30px 0 30px" }}
-          >
-            Sales Quantity
-          </Typography>
-          <Box height="250px" mt="-20px">
-            <BarChart isDashboard={true} />
-          </Box>
-        </Box>
+        <StatSalesQuantity />
 
         {/*  */}
         <Box

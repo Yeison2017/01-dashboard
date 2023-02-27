@@ -12,6 +12,7 @@ export { default as StatBox } from "./molecules/StatBox";
 export { default as StatCampaign } from "./molecules/StatCampaign";
 export { default as StatRecentTransactions } from "./molecules/StatRecentTransactions";
 export { default as StatRevenueGenerated } from "./molecules/StatRevenueGenerated";
+export { default as StatSalesQuantity } from "./molecules/StatSalesQuantity";
 export { default as Topbar } from "./molecules/Topbar";
 export { default as Calendar } from "./organisms/Calendar";
 export { default as Item } from "./organisms/sidebar/Item";
