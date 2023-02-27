@@ -4,6 +4,12 @@ import { useTheme } from "../../hooks";
 import { IStyles, ITokens } from "../../interfaces";
 
 const styles = (colors?: ITokens): IStyles => ({
+  container: {
+    gridColumn: "span 4",
+    gridRow: "span 2",
+    backgroundColor: colors?.primary[400],
+    overflow: "auto",
+  },
   containerTitle: {
     display: "flex",
     justifyContent: "space-between",
@@ -28,7 +34,7 @@ const styles = (colors?: ITokens): IStyles => ({
 const StatRecentTransactions = () => {
   const { colors } = useTheme();
   return (
-    <>
+    <Box sx={styles(colors).container}>
       <Box sx={styles(colors).containerTitle}>
         <Typography variant="h5" sx={styles(colors).title}>
           Recent Transactions
@@ -56,7 +62,7 @@ const StatRecentTransactions = () => {
           </Box>
         </Box>
       ))}
-    </>
+    </Box>
   );
 };
 

@@ -39,28 +39,6 @@ const styles = (colors?: ITokens): IStyles => ({
     gridAutoRows: "140px",
     gap: "20px",
   },
-
-  row2: {
-    mt: "25px",
-    p: "0 30px",
-    display: "flex",
-    justifyContent: "space-between",
-    alignItems: "center",
-  },
-  containerTransition: {
-    gridColumn: "span 4",
-    gridRow: "span 2",
-    backgroundColor: colors?.primary[400],
-    overflow: "auto",
-  },
-  cartTransition: {
-    display: "flex",
-    justifyContent: "space-between",
-    alignItems: "center",
-    borderBottom: `4px solid ${colors?.primary[500]}`,
-    colors: colors?.grey[100],
-    p: "15px",
-  },
 });
 
 const Dashboard = () => {
@@ -87,9 +65,7 @@ const Dashboard = () => {
 
         {/* ROW 2 */}
         <StatRevenueGenerated />
-        <Box sx={styles(colors).containerTransition}>
-          <StatRecentTransactions />
-        </Box>
+        <StatRecentTransactions />
 
         {/* ROW 3 */}
         <StatCampaign />
