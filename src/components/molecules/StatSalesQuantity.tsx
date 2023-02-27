@@ -2,7 +2,6 @@ import { Box, Typography } from "@mui/material";
 import { useTheme } from "../../hooks";
 import { IStyles, ITokens } from "../../interfaces";
 import BarChart from "../atoms/BarChart";
-import ProgressCircle from "../atoms/ProgressCircle";
 
 const styles = (colors?: ITokens): IStyles => ({
   container: {

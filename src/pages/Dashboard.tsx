@@ -1,11 +1,8 @@
 import { Box, Button, Typography } from "@mui/material";
-
 import DownloadOutlinedIcon from "@mui/icons-material/DownloadOutlined";
 
 import {
-  BarChart,
   GeographyChart,
-  ProgressCircle,
   TitlePage,
   StatBoxCard,
   StatRevenueGenerated,
